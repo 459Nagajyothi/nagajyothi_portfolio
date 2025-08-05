@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header with Name and Navigation -->
+    <header>
+        <div class="container">
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#projects">Project</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+    <div class="container home-container">
+        <img src="image.jpeg" alt="Profile Picture" class="profile-img">
+        <div class="intro-text">
+            <h1>My Portfolio</h1>
+            <h2>Naga Jyothi Neravati</h2>
+            <h3>Electronics and Communication Engineer</h3> 
+        </div>
+    </div>
+</section>
+
+
+  
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h4>About Me</h4>
+            <p>Hi, I'm Naga Jyothi, a highly skilled engineer with a strong background in Electronics and Communication Engineering. I am passionate about applying my theoretical knowledge to practical projects and am always looking for opportunities to learn and grow in my field.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+
+    <section id="education" class="section">
+    <div class="container">
+        <h2>Education</h2>
+        <div class="education-list">
+            <div class="education-item">
+                <h3>Bachelor of Technology</h3>
+                <p>Electronics and Communication Engineering</p>
+                <p>SVR Engineering College,Ayyalurmetta,Nandyal</p>
+                <p>2022 - 2026</p>
+                
+            </div>
+            <div class="education-item">
+                <h3>Intermediate</h3>
+                <p> MPC</p>
+                <p>Raos Junior College, Nandyal</p>
+                <p>2020 - 2022</p>
+            </div>
+            <div class="education-item">
+                <h3>SSC</h3>
+                <p>SPY Reddy English Medium School, Nandyal</p>
+                <p>2020</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill-item">C Language</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">HTML and CSS</div>
+                <div class="skill-item">Basics of DBMS</div>
+                <div class="skill-item">Figma</div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Certificates Section -->
+<section id="certificates" class="section">
+    <div class="container">
+        <h2>Certificates</h2>
+        <div class="certificates-grid">
+            <div class="certificate-item">
+                <p>NPTEL - Computer Architecture</p>
+                <a href="Nptel.jfif" class="lightbox">
+                    <img src="Nptel.jfif" alt="NPTEL Certificate">
+                </a>
+            </div>
+            <div class="certificate-item">
+                <p>IBM - Introduction to Artificial Intelligence</p>
+                <a href="ibm.jfif" class="lightbox">
+                    <img src="ibm.jfif" alt="IBM Certificate">
+                </a>
+            </div>
+            <div class="certificate-item">
+                <p>Oracle - AI Foundations Associate</p>
+                <a href="Oracle.jfif" class="lightbox">
+                    <img src="Oracle.jfif" alt="Oracle Certificate">
+                </a>
+            </div>
+            <div class="certificate-item">
+                <p>SkillDzire - Machine Learning</p>
+                <a href="SkillDzire.jfif" class="lightbox">
+                    <img src="SkillDzire.jfif" alt="SkillDzire Certificate">
+                </a>
+            </div>
+            <div class="certificate-item">
+                <p>Eduskills - Web Full Stack Developer</p>
+                <a href="Eduskills.jfif" class="lightbox">
+                    <img src="Eduskills.jfif" alt="Eduskills Certificate">
+                </a>
+  
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Phone: 9392881765</p>
+            <p>Email: neravatijyothi123@gmail.com</p>
+            <p>Address: Gandhinagar, Nandyal</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/naga-jyothi-19663728b" target="_blank">My LinkedIn Profile</a></p>
+
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="projects">
+    <div class="project">
+        <h2>Portfolio Website Development</h2>
+        <p>I have Designed and developed a fully responsive personal portfolio website to display my academic details, technical skills, and certifications. Implemented interactive features using JavaScript for enhanced user experience.</p>
+        <a href="my-portfolio-project/index.html" target="_blank">View Project</a>
+    </div>
+</section>
+
+
+<!-- Lightbox Overlay -->
+<div class="lightbox-overlay" id="lightbox-overlay">
+    <div class="lightbox-content">
+        <img src="" alt="Enlarged Certificate" id="lightbox-image">
+        <a href="" download class="download-btn" id="download-btn">Download Certificate</a>
+    </div>
+</div>
+
+<!-- Lightbox Script -->
+<script>
+    const lightboxLinks = document.querySelectorAll('.lightbox');
+    const lightboxOverlay = document.getElementById('lightbox-overlay');
+    const lightboxImg = document.getElementById('lightbox-image');
+    const downloadBtn = document.getElementById('download-btn');
+
+    lightboxLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const imgSrc = link.getAttribute('href');
+            lightboxImg.src = imgSrc;
+            downloadBtn.href = imgSrc;  // Set download link
+            lightboxOverlay.classList.add('show');
+        });
+    });
+
+    lightboxOverlay.addEventListener('click', (e) => {
+        if (e.target === lightboxOverlay) {  // Close only if clicking outside content
+            lightboxOverlay.classList.remove('show');
+        }
+    });
+</script>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+   
+                
+          
